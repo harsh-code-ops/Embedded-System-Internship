@@ -1,2 +1,2 @@
-Write a C code to develop a basic calculator, based on instruction from user ( add, sub, mul, div ), perform the operation on two numbers
+Write a C code to develop a basic calculator, based on instruction from user ( add, sub, mul, div ), perform the operation on two numbers                                                                                                                                                                                                                                                                      
 Makefile of sign vs unsign !!!!!
