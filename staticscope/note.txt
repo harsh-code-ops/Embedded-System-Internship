@@ -1,0 +1,7 @@
+Question - Create a file math.c with a static global variable called pi initialized to 3.14.
+
+Try accessing pi from main.c.
+
+Observe and explain what happens and why you can't access it ???
+
+Answer - When I tried to access the pi variable from main.c, I got a linker error saying "undefined reference to pi". This happened because in math.c, I had declared pi as a static global variable. The static keyword restricts the variable’s scope to the file it's declared in, meaning it can't be accessed from any other file. So, even though I used extern in main.c to refer to pi, the compiler couldn’t find it during linking. Basically, static makes the variable private to its file, and that’s why accessing it from another file isn’t possible.
