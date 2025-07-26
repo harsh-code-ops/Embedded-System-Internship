@@ -1,1 +1,3 @@
-describe approach
+My approach uses two threads and a shared counter to print numbers sequentially. To ensure the correct order, I implemented a turn-based synchronization system using two POSIX semaphores.
+
+One semaphore acts as a "token" for the odd-number thread, and the other for the even-number thread. A thread can only print its number after acquiring its token with sem_wait(). After printing, it passes the turn to the other thread by releasing the other thread's token with sem_post(). This creates a simple and efficient "pass the baton" mechanism, guaranteeing a strict 1, 2, 3... sequence.
